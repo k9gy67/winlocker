@@ -60,7 +60,7 @@ label5 = tk.Label(
     text=r"""
     для откупа вы можете связатся с нами
     писать нужно в социальную сеть telegram
-    юзернейм автора @Halitava""",
+    юзернейм автора @danka1023""",
     foreground="white",        
     background="blue",  
     font=("Arial", 30),
